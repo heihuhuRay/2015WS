@@ -1,0 +1,19 @@
+Benutzen von ScanSim.exe und ScanEducator:
+*****************************************
+
+1. DosBox öffnen  ("Start" - "Programme"    oder Klick auf Desktop-Symbol
+
+2. In der DosBox Folgendes eingeben:
+> mount E E:\work4
+> e:
+> scansim.exe
+Beenden mit ALT+Tab und DosBox-Programm schliessen
+
+3. "Scaned" aufrufen:
+DosBox öffnen und Folgendes eingeben:
+> mount E E:\work4
+> e:
+> scaned
+Beenden mit ALT+Tab und DosBox-Programm schliessen
+
+

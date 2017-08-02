@@ -1,0 +1,21 @@
+Usage of ScanSim.exe and ScanEducator:
+*****************************************
+
+1.Open DosBox  (Click on brown desktop symbol)
+
+2. Write the following lines in the DosBox terminal:
+> mount E E:\work4
+> e:
+> scansim.exe
+
+Close with ALT+Tab and close DosBox-program
+
+3. Call "Scaned":
+Write the following lines in the DosBox terminal:
+> mount E E:\work4
+> e:
+> scaned
+
+Close with ALT+Tab and close DosBox-program
+
+

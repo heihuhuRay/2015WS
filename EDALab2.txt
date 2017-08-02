@@ -1,0 +1,34 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY crc_4_E IS
+  
+  PORT (
+    clk      : IN  std_logic;
+    reset    : IN  std_logic;
+    data_in  : IN  std_logic;
+    crc_en	  : IN  std_logic;
+    crc_out  : OUT std_logic_vector (3 DOWNTO 0));
+
+END ENTITY crc_4_E;
+
+architecture rtl of crc_4_E is 
+signal ep: std_logic_vector(3 downto 0): ="0000";
+
+begin
+    crc_out<=ep;
+    
+    process(clk,reset)
+        begin
+            if reset='1' then
+                ep<="0000";
+            elsif clk'event and clk='1' then
+                    if crc_en='1' then
+                        ep(0)<=data_in xor ep(3);
+                        ep(1)<=data_in xor ep(3) xor ep(0);
+                        ep(2)<=ep(1);
+                        ep(3)<=ep(2);
+                    end if;
+            end if;
+           end process;
+        end architecture rtl;
